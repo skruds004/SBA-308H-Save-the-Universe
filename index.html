@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/1473966237.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Wave: x of y</h1>
+    <div id="main-container">
+        <div id="swarm-container">
+        </div>
+        <div id="ship-container">
+            <i class="spaceship fa-solid fa-shuttle-space fa-rotate-270 fa-5x"></i>
+            <div id="hull-points"></div>
+            <div id="text-container">
+                <p><b>Click to Attack!</b></p>
+                <p><b>The Glowing Alien Will Attack You!</b></p>
+                <hr>
+                <div id="text-box">
+                </div>
+            </div>
+            <button id="retreat">RETREAT</button>
+        </div>
+    </div>
     <script type="module" src="app.js"></script>
 </body>
 </html>

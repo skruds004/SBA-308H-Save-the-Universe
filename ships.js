@@ -1,4 +1,7 @@
- export class Ship {
+//export const hullPoints = document.querySelector('#hull-points');
+//export let currentHull = 20;
+
+class Ship {
     #hull;
     #firepower;
     #accuracy;
@@ -10,7 +13,9 @@
     attack(enemy) {
         if(Math.random() < this.#accuracy) {
             enemy.getHit(this.#firepower);
+            return true;
         }
+        return false;
     }
     getHit(firepower) {
         this.hull -= firepower;
@@ -39,7 +44,7 @@ export class YourShip extends Ship {
 }
 
 export class AlienShip extends Ship {
-    constructor() {
+    constructor(number) {
         super(
             //hull between 3 and 6
             Math.floor(Math.random() * 4) + 3,
@@ -48,6 +53,16 @@ export class AlienShip extends Ship {
             //accuracy between .6 and .8
             ((Math.floor(Math.random() * 3) + 6) * 0.1).toFixed(1)
         );
+        this.number = number;
     }
-    
+    attack(enemy) {
+        let hit = super.attack(enemy);
+        if(hit) {
+            console.log('Alien hit');
+        }
+        else {
+            console.log('Alien miss');
+        }
+        return hit;
+    }
 }
