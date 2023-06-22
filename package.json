@@ -1,1 +1,8 @@
-{"type" : "module"}
+{
+    "name": "save-the-universe",
+    "author": "Ryan Hasler",
+    "version": "1.0.0",
+    "description": "SBA 308H - Save the Universe project",
+    "main": "index.html",
+    "type": "module"
+  }
