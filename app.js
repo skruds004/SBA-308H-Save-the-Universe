@@ -19,12 +19,12 @@ restartButton.id = 'restart-button';
 restartButton.innerText = 'Restart';
 gameEnd.appendChild(endText);
 gameEnd.appendChild(restartButton);
+
+
 restartButton.addEventListener('click', function() {
-    startGame(5);
+    startGame(4);
 });
 
-
-let numWaves = 5;
 
 //initialize ship and hullpoints UI
 const USSAssembly = new Ship();
@@ -36,6 +36,7 @@ for(let i = 0; i < USSAssembly.hull; i++) {
     hullPoints.appendChild(hullPoint);
 }
 
+let numWaves = 4;
 startGame(numWaves);
 
 
@@ -140,7 +141,7 @@ function startWave(wavesLeft) {
     numWaves = wavesLeft - 1;
     waveNum.innerText = "Wave " + (waveNum.value - wavesLeft + 1) + " of: " + waveNum.value;
     removeAliens();
-    let numAliens = 5 - numWaves;
+    let numAliens = 4 - numWaves;
     for (let i = 0; i < numAliens; i++) {
         //fill an array with aliens
         aliens.push(new AlienShip(i));
