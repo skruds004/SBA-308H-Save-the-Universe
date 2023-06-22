@@ -94,6 +94,7 @@ body {
     background-color: rgb(34, 1, 34);
 }
 
+
 .hull-point {
     background-color:cyan;
     height:50px;
@@ -106,13 +107,17 @@ body {
     margin-left: 0;
 }
 
-#text-container {
+#text-container, .game-end {
     text-align: center;
     width: 40vh;
     margin-top: 20px;
     border: 5px solid orange;
     border-radius: 5px;
     background-color: rgb(34, 1, 34);
+}
+
+#text-box {
+    min-height: 150px;
 }
 
 p {
@@ -123,7 +128,11 @@ p {
 }
 
 #retreat {
-    margin-top: 10px;
+    display: none;
+}
+
+button {
+    margin: 10px 0;
     background-color: rgb(34, 1, 34);
     color: cyan;
     border: 3px solid orange;
@@ -131,7 +140,7 @@ p {
     font-weight: bold;
 }
 
-#retreat:active {
+button:active {
     background-color: cyan;
     color: rgb(34, 1, 34);
 }
