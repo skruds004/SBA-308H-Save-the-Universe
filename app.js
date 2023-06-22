@@ -220,7 +220,7 @@ function win() {
     //otherwise end game state is reached
     else {
         updateText("<p class='good'>You've saved the universe from the aliens!</p>");
-        waveText.innerText = "";
+        waveText.innerText = "Earth Lives To See Another Day!";
         endText.innerText = "You've saved the universe from the aliens!";
         swarm.appendChild(gameEnd);
     }
