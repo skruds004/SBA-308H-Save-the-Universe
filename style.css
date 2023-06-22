@@ -116,6 +116,10 @@ body {
     background-color: rgb(34, 1, 34);
 }
 
+.game-end {
+    padding: 10px;
+}
+
 #text-box {
     min-height: 150px;
 }

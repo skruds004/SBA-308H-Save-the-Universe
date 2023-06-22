@@ -135,6 +135,7 @@ function startGame(waves) {
 }
 
 function startWave(wavesLeft) {
+    retreatButton.style.display = "none";
     if(wavesLeft != waveNum.value) {
         repairHull(Math.floor(Math.random() * 5) + 3);
     }
@@ -169,11 +170,11 @@ function startWave(wavesLeft) {
 function gameOver(isRetreat) {
     if(isRetreat) {
         updateText("<p class='bad'>You ran from the aliens, but at what cost...</p>");
-        endText.innerText = "You ran from the alien, but at what cost...";
+        endText.innerText = "You Ran From the Aliens, but At What Cost...";
     }
     else {
         updateText("<p class='bad'>You fought valiantly but you were overcome by aliens.</p>");
-        endText.innerText = "You fought valiantly but you were overcome by the aliens";
+        endText.innerText = "You Fought Valiantly but You Were Overcome By the Aliens";
     }
 
     removeAliens();
